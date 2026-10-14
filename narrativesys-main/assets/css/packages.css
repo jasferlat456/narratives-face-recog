@@ -1,0 +1,51 @@
+/* Packages: styled to match the landing page (tokens, type scale, buttons).
+   Shared by the landing section and the admin live-preview. */
+.pk-section{--ink:#1b1b1b;--muted:#6f6a64;--line:#e8e5e0;--accent:#b8854a;--bg:#fbfaf8;
+  --serif:"DM Serif Display",Georgia,serif;--sans:"Outfit",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);font-family:var(--sans);padding:110px 0 100px}
+.pk-section .eyebrow{font-size:14px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.pk-empty{margin-top:50px;color:var(--muted);font-size:18px}
+
+.pk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;align-items:stretch;margin-top:70px}
+
+.pk-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.pk-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-2px)}
+.pk-card.is-popular{border-color:var(--accent)}
+.pk-media{position:relative;aspect-ratio:16/10;background:#e8e2d9 center/cover no-repeat}
+.pk-badge{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:12px;font-weight:500;letter-spacing:.06em;padding:6px 12px;border-radius:3px}
+
+.pk-body{display:flex;flex-direction:column;flex:1;padding:30px 26px 28px}
+.pk-name{margin:0 0 6px;font:400 28px/1.2 var(--serif);letter-spacing:-.01em}
+.pk-desc{margin:0;font-size:15px;color:var(--muted)}
+.pk-price{margin:22px 0 6px;font:400 36px/1.1 var(--serif);color:var(--accent)}
+.pk-meta{margin:0;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pk-meta-inline{font:400 14px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pk-body .pk-meta{padding-bottom:22px;border-bottom:1px solid var(--line)}
+.pk-body .pk-price:not(:has(+ .pk-meta)){padding-bottom:22px;border-bottom:1px solid var(--line)}
+
+.pk-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.pk-list li{position:relative;padding-left:24px;font-size:15px;line-height:1.5}
+.pk-list li::before{content:"✓";position:absolute;left:0;top:0;font-size:13px;color:var(--accent)}
+.pk-more{margin:14px 0 0;font-size:14px;color:var(--muted)}
+
+.pk-actions{display:flex;gap:12px;margin-top:auto;padding-top:30px}
+.pk-btn{flex:1;display:inline-block;text-align:center;white-space:nowrap;padding:14px 8px;font:500 14px var(--sans);border-radius:3px;border:1px solid var(--accent);cursor:pointer;text-decoration:none;transition:background .2s,color .2s}
+.pk-btn-ghost{background:transparent;color:var(--accent)}
+.pk-btn-ghost:hover{background:#f5ece1}
+.pk-btn-solid{background:var(--accent);color:#fff}
+.pk-btn-solid:hover{background:#a67339}
+.pk-btn-block{display:block;margin-top:26px}
+
+.pk-dialog{margin:auto;width:min(520px,92vw);border:0;border-radius:4px;padding:34px;color:var(--ink,#1b1b1b);background:#fff;font-family:"Outfit",system-ui,sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.pk-dialog::backdrop{background:rgba(20,16,10,.55)}
+.pk-dlg-head{display:flex;justify-content:space-between;gap:16px}
+.pk-x{border:0;background:none;font-size:30px;line-height:1;cursor:pointer;color:#6f6a64}
+.pk-x:hover{color:#1b1b1b}
+.pk-dialog .pk-name{font:400 28px/1.2 "DM Serif Display",Georgia,serif}
+.pk-dialog .pk-desc{font-size:15px;color:#6f6a64}
+.pk-dialog .pk-price{margin:22px 0 0;font:400 36px/1.1 "DM Serif Display",Georgia,serif;color:#b8854a}
+.pk-dialog .pk-list{margin-top:22px;padding-top:22px;border-top:1px solid #e8e5e0}
+.pk-dialog .pk-list li{position:relative;padding-left:24px;font-size:15px;line-height:1.5}
+.pk-dialog .pk-list li::before{content:"✓";position:absolute;left:0;top:0;font-size:13px;color:#b8854a}
+
+@media(max-width:900px){.pk-section{padding:70px 0 80px}.pk-grid{margin-top:50px}}
